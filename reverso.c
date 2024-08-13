@@ -553,7 +553,7 @@ void mostra_pecas(char tomove, char jogou_antes, char computer, int posicao_atua
 	cprintf("%s", nome_jogo);
 	gotoxy(57, 1);
 	textcolor(LIGHTBLUE);
-	cprintf("Nível:%s", nivel_j[nivel]);
+	cprintf("N¡vel:%s", nivel_j[nivel]);
 
 	gotoxy(1, 2);
 	clreol();
@@ -620,7 +620,7 @@ void mostra_pecas(char tomove, char jogou_antes, char computer, int posicao_atua
 		coluna = 7;
 		gotoxy(coluna, linha);
 	}
-	/* Aqui o jogador X ou O já jogou, entao devemos
+	/* Aqui o jogador X ou O ja jogou, entao devemos
 		 mostrar as posicoes possiveis para o outro jogador
 	*/
 	mostra_marcas(tomove == 'X' ? 'O' : 'X');
@@ -643,7 +643,7 @@ void mostra_tabuleiro(char tomove, char computer)
 	cprintf("%s", nome_jogo);
 	gotoxy(57, 1);
 	textcolor(LIGHTBLUE);
-	cprintf("Nível:%s", nivel_j[nivel]);
+	cprintf("N¡vel:%s", nivel_j[nivel]);
 
 	gotoxy(7, 2);
 	textcolor(WHITE);
@@ -690,7 +690,7 @@ void mostra_tabuleiro(char tomove, char computer)
 
 	textcolor(BROWN);
 	gotoxy(5, 5);
-	cprintf("?????????????????????????????????      ?????????????????????????????????");
+	cprintf("ÉÍÍÍËÍÍÍËÍÍÍËÍÍÍËÍÍÍËÍÍÍËÍÍÍËÍÍÍ»      ÉÍÍÍËÍÍÍËÍÍÍËÍÍÍËÍÍÍËÍÍÍËÍÍÍËÍÍÍ»");
 
 	linha = 6;
 	for (i = 0; i <= 7; i++)
@@ -703,7 +703,7 @@ void mostra_tabuleiro(char tomove, char computer)
 		{
 			gotoxy(coluna, linha);
 			textcolor(BROWN);
-			cprintf("?");
+			cprintf("º");
 			coluna += 4;
 		}
 		gotoxy(42, linha);
@@ -715,7 +715,7 @@ void mostra_tabuleiro(char tomove, char computer)
 		{
 			gotoxy(coluna, linha);
 			textcolor(BROWN);
-			cprintf("?");
+			cprintf("º");
 			coluna += 4;
 		}
 		linha += 1;
@@ -723,13 +723,13 @@ void mostra_tabuleiro(char tomove, char computer)
 		{
 			gotoxy(5, linha);
 			textcolor(BROWN);
-			cprintf("?????????????????????????????????      ?????????????????????????????????");
+			cprintf("ÌÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍ¹      ÌÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍÎÍÍÍ¹");
 		}
 		else
 		{
 			gotoxy(5, linha);
 			textcolor(BROWN);
-			cprintf("?????????????????????????????????      ?????????????????????????????????");
+			cprintf("ÈÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍ¼      ÈÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍÊÍÍÍ¼");
 		}
 		linha += 1;
 	}
@@ -832,11 +832,11 @@ void main(void)
 		gotoxy(27, 1);
 		cprintf("REVERSO por Edson Perotoni");
 		gotoxy(14, 2);
-		cprintf("Para disciplina de Inteligência Artificial");
+		cprintf("Para disciplina de Inteligˆncia Artificial");
 		gotoxy(14, 3);
-		cprintf("Professor Felipe Muller - INFORMÁTICA - UFSM");
+		cprintf("Professor Felipe Muller - INFORMµTICA - UFSM");
 		gotoxy(19, 5);
-		cprintf("Qual o nível de dificuldade do jogo? ");
+		cprintf("Qual o n¡vel de dificuldade do jogo? ");
 
 		gotoxy(19, 6);
 		textcolor(LIGHTBLUE);
@@ -874,12 +874,12 @@ void main(void)
 		gotoxy(56, 5);
 		cprintf("%d", depth == 0 ? 1 : depth);
 
-		if (pergunta(14, 12, "Quer avisos sonoros(s/n)?") == 's')
+		if (pergunta(14, 12, "Vocˆ quer avisos sonoros(s/n)?") == 's')
 			Aviso = 1;
 		else
 			Aviso = 0;
 
-		if (pergunta(14, 14, "Quer mover primeiro (s/n)? ") == 's')
+		if (pergunta(14, 14, "Vocˆ quer mover primeiro (s/n)? ") == 's')
 		{
 			tomove = human = 'X';
 			computer = 'O';
@@ -891,15 +891,15 @@ void main(void)
 		}
 
 		gotoxy(19, 16);
-		cprintf("INSTRUÇ?ES:");
+		cprintf("INSTRU€OES:");
 		gotoxy(14, 17);
-		cprintf("Para escolher a posição do tabuleiro");
+		cprintf("Para escolher a posi‡ao do tabuleiro");
 		gotoxy(14, 18);
-		cprintf("digite um número inteiro que é composição da linha e da coluna");
+		cprintf("digite um n£mero inteiro que ‚ composi‡Æo da linha e da coluna");
 		gotoxy(14, 19);
 		cprintf("EXEMPLO=> linha: 3 coluna: 7 ====> digite 37");
 		gotoxy(14, 20);
-		cprintf("Número negativo abandona a partida");
+		cprintf("N£mero negativo abandona a partida");
 		gotoxy(14, 20);
 		cprintf("BOA SORTE! Pressione uma tecla para iniciar...");
 		getch();
@@ -958,7 +958,7 @@ void main(void)
 							clreol();
 							gotoxy(5, 22);
 							textcolor(WHITE);
-							if (pergunta(5, 22, "Quer abandonar a partida(s/n)? ") == 's')
+							if (pergunta(5, 22, "Vocˆ quer abandonar a partida(s/n)? ") == 's')
 								goto label;
 							else
 							{
@@ -1072,22 +1072,22 @@ void main(void)
 		textcolor(WHITE);
 		if (pl == JogadorUm)
 			if (computer == 'X')
-				cprintf("Lamento, mas EU venci com %d peças a mais!", diferenca);
+				cprintf("Lamento, mas EU venci com %d pe‡as a mais!", diferenca);
 			else
-				cprintf("Raios! VOCê venceu com %d peças a mais!", diferenca);
+				cprintf("Raios! VOCÒ venceu com %d pe‡as a mais!", diferenca);
 		else if (pl == JogadorDois)
 			if (human == 'O')
-				cprintf("Raios! VOCê venceu com %d peças a mais!", diferenca);
+				cprintf("Raios! VOCÒ venceu com %d pe‡as a mais!", diferenca);
 			else
-				cprintf("Lamento, mas EU venci com %d peças a mais!", diferenca);
+				cprintf("Lamento, mas EU venci com %d pe‡as a mais!", diferenca);
 		else
-			cprintf("Humano, nós EMPATAMOS!");
+			cprintf("Humano, n¢s EMPATAMOS!");
 	label:
 		gotoxy(5, 23);
 		clreol();
 		gotoxy(5, 23);
 		textcolor(WHITE);
-		resposta = pergunta(5, 23, "Você quer jogar novamente(s/n)?");
+		resposta = pergunta(5, 23, "Vocˆ quer jogar novamente(s/n)?");
 	} while (resposta == 's');
 
 	textbackground(BLACK);
