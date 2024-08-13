@@ -6,3 +6,4 @@ Isso compilava no Borland C naquela época.
 Exibe o jogo em modo texto.
 Usa o algoritmo minimax (sabe-se lá de onde veio na internet daquele ano) com alterações na tabela de valores heurísticos.
 Publico aqui  por que vai que sirva pra algum aluno tirar umas idéias.
+O encoding é CP437. Isso rodava em DOS.
