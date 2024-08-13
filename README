@@ -3,3 +3,8 @@ Escrito por Edson Perotoni
 Disciplina: Inteligencia Artificial
 Curso: Informática/UFSM
 Ano: 1997
+
+Isso compilava no Borland C naquela época.
+Exibe o jogo em modo texto.
+Usa o algoritmo minimax (sabe-se lá de onde veio na internet daquele ano) com alterações na tabela de valores heurísticos.
+Publico aqui  por que vai que sirva pra algum aluno tirar umas idéias.
